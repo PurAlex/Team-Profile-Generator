@@ -15,6 +15,7 @@ class Questions {
 
     }
 
+    // Let the user choose team member or ends the app
     teamChoices(){
         inquirer
         .prompt([
@@ -36,6 +37,7 @@ class Questions {
         });
     }
 
+    // Logs questions of manager member
     managerChoice() {
         inquirer
             .prompt([
@@ -66,6 +68,7 @@ class Questions {
             });
     }
 
+    // Logs questions of engineer member
     engineerChoice() {
         inquirer
             .prompt([
@@ -95,6 +98,7 @@ class Questions {
             });
     }
 
+    // Logs questions of intern member
     internChoice() {
         inquirer
             .prompt([
@@ -124,10 +128,14 @@ class Questions {
             });
     }
 
+    // Logs thank you and ends the app
     endChoices(){
         console.log("\nThank you!");
     }
 }
 
+// Initialize a new questions object
 const questions = new Questions();
+
+// Start app
 questions.managerChoice();
