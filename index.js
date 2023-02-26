@@ -12,7 +12,11 @@ const render = require("./src/page-template.js");
 
 class Questions {
     constructor() {
+        this.responses = [];
+    }
 
+    getResponses(){
+        return this.responses;
     }
 
     // Let the user choose team member or ends the app
@@ -80,10 +84,12 @@ class Questions {
                 {
                     type: "input",
                     message: "What is the team manager's office number?",
-                    name: "office",
+                    name: "officeNumber",
                 },
             ])
-            .then((response) => {
+            .then(response => {
+                const managerResponses = new Manager(response.name, response.id, response.email, response.officeNumber)
+                this.responses.push(managerResponses);
                 this.teamChoices();
             });
     }
@@ -134,6 +140,10 @@ class Questions {
                 }
             ])
             .then((response) => {
+
+                const engineerResponses = new Engineer(response.name, response.id, response.email, response.github)
+                this.responses.push(engineerResponses);
+                
                 this.teamChoices();
             });
     }
@@ -184,6 +194,10 @@ class Questions {
                 },
             ])
             .then((response) => {
+
+                const internResponses = new Intern(response.name, response.id, response.email, response.school)
+                this.responses.push(internResponses);
+
                 this.teamChoices();
             });
     }
@@ -191,6 +205,14 @@ class Questions {
     // Logs thank you and ends the app
     endChoices(){
         console.log("\nThank you!");
+        
+        const buildPage = () => {
+            const htmlPage = render(this.getResponses());
+         
+            console.log(htmlPage);
+        }
+
+        buildPage();
     }
 }
 
