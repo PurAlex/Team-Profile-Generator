@@ -45,17 +45,37 @@ class Questions {
                     type: "input",
                     message: "What is the team manager's name?",
                     name: "name",
+                    validate: name => {
+                        if (name){
+                            return true;
+                        } else {
+                            console.log("\nManager's name MUST be added!");
+                        }
+                    }
 
                 },
                 {
-                    type: "input",
+                    type: "number",
                     message: "What is the team manager's id?",
                     name: "id",
+                    validate: id => {
+                        if(id){
+                            return true;
+                        } else {
+                            console.log("\nEnter a valid number");
+                            return false;
+                        }
+                    }
                 },
                 {
                     type: "input",
                     message: "What is the team manager's email?",
                     name: "email",
+                    validate: email =>{
+                        if(email){
+                            return true;
+                        } else console.log("\nEmail MUST be added");
+                    }
                 },
                 {
                     type: "input",
@@ -76,16 +96,36 @@ class Questions {
                     type: "input",
                     message: "What is your engineer's name?",
                     name: "name",
+                    validate: name => {
+                        if (name){
+                            return true;
+                        } else {
+                            console.log("\nEngineer's name MUST be added!");
+                        }
+                    }
                 },
                 {
-                    type: "input",
+                    type: "number",
                     message: "What is your engineer's id?",
                     name: "id",
+                    validate: id => {
+                        if(id){
+                            return true;
+                        } else {
+                            console.log("\nEnter a valid number");
+                            return false;
+                        }
+                    }
                 },
                 {
                     type: "input",
                     message: "What is your engineer's email?",
                     name: "email",
+                    validate: email =>{
+                        if(email){
+                            return true;
+                        } else console.log("\nEmail MUST be added");
+                    }
                 },
                 {
                     type: "input",
@@ -106,16 +146,36 @@ class Questions {
                     type: "input",
                     message: "What is your intern's name?",
                     name: "name",
+                    validate: name => {
+                        if (name){
+                            return true;
+                        } else {
+                            console.log("\nEngineer's name MUST be added!");
+                        }
+                    }
                 },
                 {
-                    type: "input",
+                    type: "number",
                     message: "What is your intern's id?",
                     name: "id",
+                    validate: id => {
+                        if(id){
+                            return true;
+                        } else {
+                            console.log("\nEnter a valid number");
+                            return false;
+                        }
+                    }
                 },
                 {
                     type: "input",
                     message: "What is your intern's email?",
                     name: "email",
+                    validate: email =>{
+                        if(email){
+                            return true;
+                        } else console.log("\nEmail MUST be added");
+                    }
                 },
                 {
                     type: "input",
