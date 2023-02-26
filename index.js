@@ -209,7 +209,9 @@ class Questions {
         const buildPage = () => {
             const htmlPage = render(this.getResponses());
          
-            console.log(htmlPage);
+            fs.writeFile('./output/index.html', htmlPage, err => {
+                err ? console.log(err) : console.log("\nFile created!");
+            })
         }
 
         buildPage();
