@@ -1,0 +1,15 @@
+.team-heading{
+    background-color: red;
+}
+
+.card-header{
+    background-color: rgb(78, 108, 241);
+}
+
+.card-title{
+    color: white;
+}
+
+.card{
+    margin: 5px;
+}
