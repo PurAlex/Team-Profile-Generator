@@ -9,6 +9,8 @@ This project was created to generate dynamically a team profile with user input.
 Whem the user run the application, a prompt will be log to write the Manager information of the team, then the user will be able to choose between Engineer and Intern.
 After the user has ended adding employees, an HTML file will be created.
 
+[Walkthrough video link ](https://watch.screencastify.com/v/tPVoF6H0W3ax6goziZjv)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -39,6 +41,8 @@ node index.js
 This project is licensed under the MIT license
 
 ## Contributing
+
+While working on the project I used [StackOverflow](https://stackoverflow.com/) and [npm Inquirer](https://www.npmjs.com/package/inquirer) when I was stuck.
 
 To contribute in this repo fork and pull request.
 
